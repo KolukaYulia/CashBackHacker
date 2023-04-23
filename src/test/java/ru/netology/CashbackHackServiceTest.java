@@ -1,12 +1,12 @@
 package ru.netology;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
     @Test
-    void ShouldSeeAdditionalAmount() {
+    public void ShouldSeeAdditionalAmount() {
         CashbackHackService service = new CashbackHackService();
         int amount = 700;
         int expected = 300;
@@ -15,7 +15,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenMin() {
+    public void ShouldSeeAdditionalAmountWhenMin() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1;
         int expected = 999;
@@ -24,7 +24,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenThousand() {
+    public void ShouldSeeAdditionalAmountWhenThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
         int expected = 0;
@@ -33,7 +33,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenFullThousand() {
+    public void ShouldSeeAdditionalAmountWhenFullThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 2000;
         int expected = 0;
@@ -42,7 +42,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenAboveThousand() {
+    public void ShouldSeeAdditionalAmountWhenAboveThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1020;
         int expected = 980;
