@@ -4,49 +4,49 @@ import org.testng.annotations.Test;
 
 
 import static org.testng.Assert.*;
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
     @Test
-    void ShouldSeeAdditionalAmount() {
+    public void shouldSeeAdditionalAmount() {
         CashbackHackService service = new CashbackHackService();
         int amount = 700;
-        int expected = 300;
         int actual = service.remain(amount);
+        int expected = 300;
         assertEquals(actual, expected);
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenMin() {
+    public void shouldSeeAdditionalAmountWhenMin() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1;
-        int expected = 999;
         int actual = service.remain(amount);
+        int expected = 999;
         assertEquals(expected, actual);
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenThousand() {
+    public void shouldSeeAdditionalAmountWhenThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
-        int expected = 0;
         int actual = service.remain(amount);
+        int expected = 0;
         assertEquals(expected, actual);
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenFullThousand() {
+    public void shouldSeeAdditionalAmountWhenFullThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 2000;
-        int expected = 0;
         int actual = service.remain(amount);
+        int expected = 0;
         assertEquals(expected, actual);
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenAboveThousand() {
+    public void shouldSeeAdditionalAmountWhenAboveThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1020;
-        int expected = 980;
         int actual = service.remain(amount);
+        int expected = 980;
         assertEquals(expected, actual);
     }
 }
