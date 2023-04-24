@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CashbackHackServiceTest {
     @Test
-    void ShouldSeeAdditionalAmount() {
+    void shouldSeeAdditionalAmount() {
         CashbackHackService service = new CashbackHackService();
         int amount = 700;
         int expected = 300;
@@ -15,7 +15,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenMin() {
+    void shouldSeeAdditionalAmountWhenMin() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1;
         int expected = 999;
@@ -24,7 +24,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenThousand() {
+    void shouldSeeAdditionalAmountWhenThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
         int expected = 0;
@@ -33,7 +33,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenFullThousand() {
+    void shouldSeeAdditionalAmountWhenFullThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 2000;
         int expected = 0;
@@ -42,7 +42,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void ShouldSeeAdditionalAmountWhenAboveThousand() {
+    void shouldSeeAdditionalAmountWhenAboveThousand() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1020;
         int expected = 980;
